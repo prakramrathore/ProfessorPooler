@@ -25,6 +25,7 @@ def assign_topic_probabilities(docs, topics):
     # Create the topic-word matrix
     topic_word_mat = np.zeros((len(topics), len(vocab)), dtype=int)
     for topic, words in topics.items():
+        # print(f"topic: {topic}, words: {words}")
         for word in words:
             topic_word_mat[topic, vocab_index[word]] = 1
     
